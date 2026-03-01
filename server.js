@@ -44,6 +44,11 @@ const corsOptions = {
 app.use(cors(corsOptions));
 
 // Routes
+app.use((req, res, next) => {
+  console.log(`${req.method} ${req.url}`);
+  next();
+});
+
 app.use('/api', authRoutes);
 
 // Health check route
