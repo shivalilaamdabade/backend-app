@@ -22,12 +22,14 @@ app.use(cookieParser());
 const corsOptions = {
   origin: process.env.FRONTEND_URL || [
     'http://localhost:5173', // Vite default port
+    'http://localhost:5174', // Vite alternative port
     'http://localhost:3000', // Common dev port
     'http://localhost:3001', // Alternative dev port
     'http://localhost:8080', // Common dev port
     'http://localhost:8000', // Common dev port
     'http://localhost:4173', // Vite build preview
     'http://127.0.0.1:5173',
+    'http://127.0.0.1:5174',
     'http://127.0.0.1:3000',
     'http://127.0.0.1:3001',
     'http://127.0.0.1:8080',
